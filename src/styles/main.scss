@@ -193,8 +193,20 @@ a {
     margin-right: 80px;
     display: flex;
     flex-direction: column;
-    // justify-content: end;
-    &::after {
+    transition: $tr;
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      .banner__decor {
+        background-color: $accent;
+        border-color: $accent;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::before {
       content: "";
       position: absolute;
       display: block;
@@ -207,12 +219,27 @@ a {
       background-repeat: no-repeat;
       background-size: contain;
     }
+    &::after {
+      content: "";
+      transition: $tr;
+      position: absolute;
+      display: block;
+      right: -80px;
+      top: 0;
+      display: block;
+      width: 80px;
+      height: 151px;
+      background-image: url(../images/banner-info-decor-hover.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+    }
     p {
-      display:flex;
+      display: flex;
       font-size: 24px;
       font-weight: 200;
       line-height: 26.4px;
-      max-width: 408px; 
+      max-width: 408px;
       margin-bottom: 0;
       margin: 40px 0 0 30px;
     }
@@ -235,5 +262,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: $tr;
   }
 }
