@@ -127,7 +127,6 @@ a {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-
   }
   &-box {
     border-radius: 20px;
@@ -154,11 +153,10 @@ a {
     img {
       position: absolute;
       right: 0;
-      top: 0;
+      bottom: 0;
       max-width: 40%;
-      max-height: 100%;
-      width: 100%;
-      transform: translate(20%, 0%);
+      max-height: 150%;
+      transform: translate(20%, -5%);
     }
   }
   &__btn {
