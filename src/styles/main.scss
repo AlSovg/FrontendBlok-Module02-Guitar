@@ -242,7 +242,7 @@ a {
       margin: 0;
     }
 
-    p {
+    .banner__item__p {
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -254,7 +254,7 @@ a {
       font-size: 24px;
       z-index: 1;
     }
-    span {
+    .banner__item__span {
       font-size: 32px;
       font-weight: 700;
       max-width: 408px;
