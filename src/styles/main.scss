@@ -15,6 +15,13 @@ body {
 a {
   text-decoration: none;
 }
+.title-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 110%;
+  letter-spacing: 1.6px;
+}
 
 .header {
   display: flex;
@@ -304,9 +311,9 @@ a {
   gap: 64px;
   animation: move-left 30s infinite linear alternate;
   &__text {
-    border: 1px solid $light;
+    border: 1px solid $gray;
     border-radius: 50px;
-    color: $light;
+    color: $gray;
     padding: 10px 20px 10px 20px;
     position: relative;
     &::before {
@@ -332,5 +339,114 @@ a {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.course {
+  display: flex;
+  gap: 70px;
+  &__title {
+    flex-basis: 395px;
+  }
+  &__content {
+    flex-basis: calc(100% - 395px - 70px);
+    width: calc(100% - 395px - 70px);
+  }
+}
+.course-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70px;
+  gap: 20px;
+  margin-top: 40px;
+  &-prev,
+  &-next {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    border: 1px solid $light;
+    border-radius: 100%;
+    right: inherit;
+    left: inherit;
+    position: inherit;
+    &::after {
+      content: "";
+      display: block;
+      width: 49px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &-prev {
+    &::after {
+      background-image: url(../images/ui/Arrow\ Left.svg);
+    }
+  }
+  &-next {
+    &::after {
+      background-image: url(../images/ui/Arrow\ Right.svg);
+    }
+  }
+}
+
+.slider-teacher {
+  &__item {
+    background-color: $dark;
+    border-radius: 50px;
+    min-height: 250px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: $tr;
+
+    &:hover {
+      background-size: 150%;
+      background-position: center;
+      z-index: 1;
+      background-image: url(../images/Grid.svg);
+      .slider-teacher__name {
+        opacity: 1;
+        &::after {
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            transparent 100%
+          );
+        }
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    margin-top: 16%;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  &__name {
+    position: absolute;
+    opacity: 0;
+    bottom: 30px;
+    left: 0;
+    margin: 0 auto;
+    transition: $tr;
+    font-size: 24px;
+    padding-left: 10%;
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 300%;
+      height: 200%;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0%,
+        transparent 100%
+      );
+      transition: 0.3s ease-in-out;
+      z-index: -1;
+    }
   }
 }
