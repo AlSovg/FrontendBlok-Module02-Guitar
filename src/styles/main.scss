@@ -370,6 +370,8 @@ a {
     right: inherit;
     left: inherit;
     position: inherit;
+    transition: $tr;
+    background-color: transparent;
     &::after {
       content: "";
       display: block;
@@ -377,6 +379,10 @@ a {
       height: 24px;
       background-repeat: no-repeat;
       background-size: contain;
+    }
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
     }
   }
   &-prev {
@@ -400,20 +406,31 @@ a {
     position: relative;
     overflow: hidden;
     transition: $tr;
-
+    border: 1px solid $dark;
     &:hover {
       background-size: 150%;
       background-position: center;
       z-index: 1;
       background-image: url(../images/Grid.svg);
+      border: 1px solid $accent;
       .slider-teacher__name {
         opacity: 1;
-        &::after {
+        &::before {
+          content: "";
+          display: block;
+          width:100%;
+          height: 300px;
+          position: absolute;
+          bottom: -30px;
+          left: 0;
           background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.8) 0%,
-            transparent 100%
+            42deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0) 59.08%
           );
+          background-repeat: no-repeat;
+          transition: 0.3s ease-in-out;
+          z-index: -1;
         }
       }
     }
@@ -427,26 +444,12 @@ a {
     position: absolute;
     opacity: 0;
     bottom: 30px;
+    width: 100%;
     left: 0;
     margin: 0 auto;
     transition: $tr;
     font-size: 24px;
     padding-left: 10%;
     z-index: 1;
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -30px;
-      left: 0;
-      width: 300%;
-      height: 200%;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.5) 0%,
-        transparent 100%
-      );
-      transition: 0.3s ease-in-out;
-      z-index: -1;
-    }
   }
 }
