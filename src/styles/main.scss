@@ -401,14 +401,14 @@ a {
   &__item {
     background-color: $dark;
     border-radius: 50px;
-    min-height: 250px;
+    min-height: 350px;
     height: 100%;
     position: relative;
     overflow: hidden;
     transition: $tr;
     border: 1px solid $dark;
     &:hover {
-      background-size: 150%;
+      background-size: 200%;
       background-position: center;
       z-index: 1;
       background-image: url(../images/Grid.svg);
@@ -418,8 +418,8 @@ a {
         &::before {
           content: "";
           display: block;
-          width:100%;
-          height: 300px;
+          width: 100%;
+          height: 2000%;
           position: absolute;
           bottom: -30px;
           left: 0;
@@ -436,8 +436,10 @@ a {
     }
   }
   &__img {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-top: 16%;
+    height: 350px;
     transition: box-shadow 0.3s ease-in-out;
   }
   &__name {
@@ -451,5 +453,69 @@ a {
     font-size: 24px;
     padding-left: 10%;
     z-index: 1;
+  }
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-top: 50px;
+  &__btn {
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 25px 20px 30px;
+    color: $accent;
+    background-color: #fff;
+    font-size: 32px;
+    position: relative;
+    text-align: start;
+    &::after {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-image: url(../images/ui/Remove.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.active{
+      &::after {
+      background-image: url(../images/ui/Plus.svg);}
+    }
+  }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 50px 30px 50px;
+    color: #121212;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 1px solid #f8f8f8;
+    &::before {
+      content: "—";
+    }
   }
 }
