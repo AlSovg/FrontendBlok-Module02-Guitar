@@ -21,6 +21,7 @@ a {
   text-transform: uppercase;
   line-height: 110%;
   letter-spacing: 1.6px;
+  margin: 0;
 }
 
 .header {
@@ -184,6 +185,8 @@ a {
     color: $light;
     cursor: pointer;
     margin-top: 91px;
+    font-family: inherit;
+    text-transform: uppercase;
     @media (hover: hover) {
       &:hover {
         background-color: transparent;
@@ -404,7 +407,7 @@ a {
   &__item {
     background-color: $dark;
     border-radius: 50px;
-    height: auto!important;
+    height: auto !important;
     max-height: 435px;
     position: relative;
     overflow: hidden;
@@ -525,28 +528,31 @@ a {
   }
 }
 
-.steps{
-  .container{
+.steps {
+  .container {
     padding-left: 45px;
     padding-right: 45px;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    h2{
-      margin: 0
+    h2 {
+      margin: 0;
     }
-  };
+  }
   border: 1px solid $light;
   border-radius: 50px;
-  background: linear-gradient(180deg, #1F2023 0%, #7027E2 50%, #1F2023 100%);
-  margin-top: 150px;
+  background: linear-gradient(180deg, #1f2023 0%, #7027e2 50%, #1f2023 100%);
+  margin-top: 150px !important;
   padding-top: 150px;
   padding-bottom: 150px;
-  &__list{
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  &__list {
     display: flex;
     gap: 30px;
   }
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -554,13 +560,70 @@ a {
     background-color: $light;
     border-radius: 50px;
     color: $dark;
-    p{
-      margin: 0;
-      font-size: 16px;
-    }
   }
-  &__icon{
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: -0.005em;
+  }
+  &__icon {
     width: 54px;
     height: 54px;
+  }
+}
+
+.result {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+  }
+  &__item {
+    background-color: $light;
+    border-radius: 20px;
+    padding: 30px;
+    &._subgrid{
+      grid-column: 2 / 5;
+      display: grid;
+      grid-template-columns: subgrid;
+      
+    }
+  }
+  &__button{ 
+    grid-column: 2 / 5;
+    background-color: $accent;
+    border-radius: 20px;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $light;
+    padding: 30px;
+    cursor: pointer;
+    border: 1px $accent solid;
+    transition: $tr;
+    @media (hover: hover) {
+      &:hover {
+        background-color: transparent;
+        color: $accent;
+        border: 1px $accent solid;;
+      }
+    }
+  }
+  &__text {
+    color: $dark;
+    margin: 0;
+    span {
+      display: block;
+      width: min-content;
+      background-color: $accent;
+      color: $light;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
   }
 }
