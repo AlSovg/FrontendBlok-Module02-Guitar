@@ -407,8 +407,8 @@ a {
   &__item {
     background-color: $dark;
     border-radius: 50px;
-    height: auto !important;
-    max-height: 435px;
+    width: 435px!important;
+    height: 707px!important;
     position: relative;
     overflow: hidden;
     transition: $tr;
@@ -530,8 +530,6 @@ a {
 
 .steps {
   .container {
-    padding-left: 45px;
-    padding-right: 45px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -560,6 +558,7 @@ a {
     background-color: $light;
     border-radius: 50px;
     color: $dark;
+    flex-basis: 25%;
   }
   &__text {
     margin: 0;
@@ -585,6 +584,7 @@ a {
     background-color: $light;
     border-radius: 20px;
     padding: 30px;
+    width:  375px;
     &._subgrid{
       grid-column: 2 / 5;
       display: grid;
@@ -605,6 +605,7 @@ a {
     cursor: pointer;
     border: 1px $accent solid;
     transition: $tr;
+    font-size: 20px;
     @media (hover: hover) {
       &:hover {
         background-color: transparent;
@@ -616,6 +617,7 @@ a {
   &__text {
     color: $dark;
     margin: 0;
+    font-size: 16px;
     span {
       display: block;
       width: min-content;
@@ -624,6 +626,8 @@ a {
       border-radius: 10px;
       padding: 10px;
       margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 110%;
     }
   }
 }
