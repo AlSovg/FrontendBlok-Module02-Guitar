@@ -592,7 +592,6 @@ a {
 
 .result {
   margin-top: 150px;
-  margin-bottom: 150px;
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -651,7 +650,6 @@ a {
 }
 
 .areas {
-  padding-bottom: 150px;
   &__list {
     padding-top: 50px;
     display: flex;
@@ -756,6 +754,7 @@ a {
     padding: 0;
     font-size: 16px;
     a{
+      color: $accent;
       text-decoration: underline;
     }
   }
