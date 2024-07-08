@@ -65,7 +65,7 @@ a {
     height: 66px;
   }
   @media screen and (max-width: $r_mobile_600) {
-    height: 40px;
+    height: 37px;
   }
   &::before {
     content: "";
@@ -81,6 +81,9 @@ a {
     }
     @media screen and (max-width: $r_mobile_600) {
       font-size: 40px;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      height: 37px;
     }
   }
   &__logo {
@@ -107,6 +110,9 @@ a {
         height: 66px;
         right: -69px;
       }
+      @media screen and (max-width: $r_tab) {
+        display: none;
+      }
     }
     &::before {
       content: "";
@@ -120,6 +126,9 @@ a {
       @media screen and (max-width: $r_mobile_600) {
         bottom: -50px;
       }
+      @media screen and (max-width: $r_mobile_600) {
+        bottom: -24px;
+      }
     }
   }
 
@@ -132,7 +141,7 @@ a {
       padding: 17px 20px 0 20px;
     }
     @media screen and (max-width: $r_tab) {
-      padding: 20px 20px 0 20px;
+      padding: 7px 15px 5px 5px;
     }
     &::after {
       content: "";
@@ -165,6 +174,9 @@ a {
       z-index: -1;
       @media screen and (max-width: $r_mobile_600) {
         bottom: -50px;
+      }
+      @media screen and (max-width: $r_mobile_400) {
+        bottom: -24px;
       }
     }
   }
@@ -208,6 +220,11 @@ a {
   @media screen and (max-width: $r_tab) {
     gap: 80px;
   }
+  @media screen and (max-width: $r_mobile_400) {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 50px;
+  }
 }
 .banner {
   background-image: url(../images/bg-banner.jpg);
@@ -229,6 +246,12 @@ a {
   }
   @media screen and (max-width: $r_mobile_600) {
     margin-top: 100px;
+  }
+  @media screen and (max-width: $r_mobile_400) {
+    margin-top: 86px;
+    padding: 20px 15px;
+    border-radius: 20px;
+    gap: 30px;
   }
   &__main {
     display: flex;
@@ -256,6 +279,9 @@ a {
     }
     @media screen and (max-width: $r_tab) {
       font-size: 40px;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      font-size: 25px;
     }
   }
   &-box {
@@ -362,6 +388,10 @@ a {
     @media screen and (max-width: $r_desc_full_over) {
       margin-top: 50px;
     }
+    @media screen and (max-width: $r_mobile_400) {
+      margin-top: 30px;
+      height: 80px;
+    }
   }
 
   &__info {
@@ -377,6 +407,9 @@ a {
     }
     @media screen and (max-width: ($r_tab - 20px)) {
       grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      gap: 12px;
     }
   }
   &__item {
@@ -420,6 +453,10 @@ a {
       justify-content: center;
       padding: 24px 10px 24px 100px;
     }
+    @media screen and (max-width: $r_mobile_400) {
+      border-radius: 20px;
+      padding: 20px 10px 20px 71px;
+    }
 
     &::before {
       content: "";
@@ -462,6 +499,9 @@ a {
         margin-bottom: initial;
         margin: 0;
       }
+      @media screen and (max-width: $r_mobile_400) {
+        font-size: 12px;
+      }
     }
     .banner__item__span {
       font-size: 32px;
@@ -471,6 +511,10 @@ a {
       @media screen and (max-width: ($r_desc - 24px)) {
         font-size: 20px;
         margin-top: 12px;
+      }
+      @media screen and (max-width: $r_mobile_400) {
+        font-size: 14px;
+        margin-top: 5px;
       }
     }
   }
@@ -490,6 +534,12 @@ a {
       top: calc(50% - 25px);
       right: inherit;
       left: 30px;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      width: 40px;
+      height: 40px;
+      left: 20px;
+      top: calc(50% - 21px);
     }
     &::before {
       content: "";
@@ -574,6 +624,9 @@ a {
 .course {
   display: flex;
   gap: 70px;
+  @media screen and (max-width: $r_mobile_400) {
+    gap: 20px !important;
+  }
   &__title {
     flex-basis: 395px;
     @media screen and (max-width: $r_desc_full) {
@@ -615,6 +668,9 @@ a {
   @media screen and (max-width: $r_mobile_600) {
     gap: 10px;
     height: 42px;
+  }
+  @media screen and (max-width: $r_mobile_400) {
+    align-items: flex-end;
   }
   &-prev,
   &-next {
@@ -775,7 +831,10 @@ a {
   gap: 24px;
   width: 100%;
   margin-top: 50px;
-
+  @media screen and (max-width: $r_mobile_400) {
+    gap: 12px;
+    margin-top: 20px;
+  }
   &__btn {
     width: 100%;
     border-radius: 20px;
@@ -786,6 +845,12 @@ a {
     position: relative;
     text-align: start;
     font-family: inherit;
+    @media screen and (max-width: $r_mobile_400) {
+      padding: 5px 5px 5px 15px;
+      font-size: 20px;
+      height: 50px;
+      border-radius: 10px;
+    }
     &::after {
       position: absolute;
       right: 25px;
@@ -797,6 +862,12 @@ a {
       background-image: url(../images/ui/Remove.svg);
       background-repeat: no-repeat;
       background-size: contain;
+      @media screen and (max-width: $r_mobile_400) {
+        width: 40px;
+        height: 40px;
+        top: 2.5px;
+        right: 5px;
+      }
     }
     &.active {
       &::after {
@@ -817,6 +888,14 @@ a {
     gap: 30px;
     &:last-child {
       padding-bottom: 30px;
+      @media screen and (max-width: $r_mobile_400) {
+        padding-bottom: 15px;
+      }
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      gap: 22px;
+      margin-top: 0;
+      padding: 15px 20px;
     }
   }
   &__panel {
@@ -835,6 +914,9 @@ a {
     &::before {
       content: "—";
     }
+    @media screen and (max-width: $r_mobile_400) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -845,6 +927,11 @@ a {
     gap: 50px;
     h2 {
       margin: 0;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      margin: 0;
+      padding: 0;
+      gap: 20px;
     }
   }
   border: 1px solid $light;
@@ -863,6 +950,12 @@ a {
   @media screen and (max-width: $r_tab) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  @media screen and (max-width: $r_mobile_400) {
+    margin-top: 27px !important;
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: auto;
   }
   &__list {
     display: flex;
@@ -908,6 +1001,7 @@ a {
 
 .result {
   margin-top: 150px;
+
   container-type: inline-size;
   container-name: result;
   @container result (max-width: 935px) {
@@ -929,6 +1023,7 @@ a {
   @container result (max-width: 450px) {
     .result__list {
       grid-template-columns: 1fr;
+      margin-top: 27px;
     }
     .result__list {
       padding-bottom: 110px;
@@ -949,6 +1044,9 @@ a {
   @media screen and (max-width: $r_tab) {
     margin-top: 80px;
   }
+  @media screen and (max-width: $r_mobile_400) {
+    margin-top: 27px;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -963,7 +1061,7 @@ a {
       gap: 20px;
     }
     @media screen and (max-width: $r_mobile_600) {
-      grid-template-columns: 1fr!important;
+      grid-template-columns: 1fr !important;
     }
   }
   &__item {
@@ -971,7 +1069,7 @@ a {
     border-radius: 20px;
     padding: 30px;
     max-width: 375px;
-    width: 100%;
+    width: auto;
     @media screen and (max-width: $r_desc) {
       padding: clamp(20px, 2.8vw, 30px);
     }
@@ -1027,6 +1125,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @media screen and (max-width: $r_mobile_400) {
+      padding-top: 27px;
+      gap: 16px;
+    }
   }
   &__link {
     display: flex;
@@ -1040,6 +1142,10 @@ a {
     font-size: 32px;
     line-height: 150%;
     position: relative;
+    @media screen and (max-width: $r_mobile_400) {
+      padding: 10px;
+      font-size: 14px;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid $accent;
     }
@@ -1066,6 +1172,10 @@ a {
       background-size: cover;
       background-repeat: no-repeat;
       transition: $tr ease-in-out;
+      @media screen and (max-width: $r_mobile_400) {
+        width: 40px;
+        height: 40px;
+      }
     }
     &::before {
       content: "";
@@ -1137,9 +1247,16 @@ a {
     grid-template-columns: 1fr 160px;
     gap: 20px;
   }
+  @media screen and (max-width: $r_mobile_400) {
+    padding: 20px 15px;
+    grid-template-columns: 1fr;
+  }
   &__info {
     @media screen and (max-width: $r_desk_wxga) {
       grid-column: 1 / 3;
+    }
+    @media screen and (max-width: $r_mobile_400) {
+      grid-column: inherit;
     }
   }
   &__logo {
@@ -1149,6 +1266,9 @@ a {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    @media screen and (max-width: $r_mobile_400) {
+      line-height: 150%;
+    }
     a {
       color: $accent;
       box-shadow: 0 4px 0 -3px $accent;
@@ -1171,6 +1291,9 @@ a {
       text-align: left;
       align-self: flex-start;
     }
+    @media screen and (max-width: $r_mobile_400) {
+      grid-column: inherit;
+    }
   }
 }
 .social {
@@ -1178,6 +1301,9 @@ a {
   display: flex;
   gap: 5px;
   justify-content: flex-end;
+  @media screen and (max-width: $r_mobile_400) {
+    justify-content: flex-start;
+  }
   &__link {
     display: flex;
     align-items: center;
